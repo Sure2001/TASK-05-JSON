@@ -1,0 +1,28 @@
+
+table {
+    width: 60%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+.action-btn {
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 2px;
+}
+.form-container {
+    margin-bottom: 20px;
+}
+input {
+    margin: 5px;
+}
+.edit-form {
+    margin-top: 20px;
+    display: none;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Table with Actions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Employee Data</h2>
+
+
+<!-- Table for displaying employees -->
+<table id="employeeTable">
+    <thead>
+        <tr>
+            <th>S. No.</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Salary</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Data will be inserted here by JavaScript -->
+    </tbody>
+</table>
+
+<!-- Form for Insert and Filter -->
+<div class="form-container">
+    <button onclick="toggleInsertForm()">Insert Employee</button>
+    <button onclick="sortEmployees()">Sort by Salary Z-A</button>
+    <button onclick="sortaEmployees()">Sort by Salary A-Z</button>
+    <button onclick="filterEmployees()">Filter by Salary > 100000</button>
+
+    <br><br>
+
+    <!-- Insert Form (hidden initially) -->
+    <div id="insertForm" style="display:none;">
+        <input type="text" id="newName" placeholder="Name" required>
+        <input type="number" id="newAge" placeholder="Age" required>
+        <input type="number" id="newSalary" placeholder="Salary" required>
+        <button onclick="insertEmployee()">Insert</button>
+    </div>
+
+    <!-- Search Form -->
+    <input type="text" id="searchInput" placeholder="Search by Name">
+    <button onclick="searchEmployee()">Search</button>
+</div>
+
+<!-- Edit Form (hidden initially) -->
+<div id="editForm" class="edit-form">
+    <h3>Edit Employee</h3>
+    <input type="text" id="editName" placeholder="Name" required>
+    <input type="number" id="editAge" placeholder="Age" required>
+    <input type="number" id="editSalary" placeholder="Salary" required>
+    <button onclick="updateEmployee()">Update</button>
+    <button onclick="cancelEdit()">Cancel</button>
+</div>
+
+
+<script src="delitls.js"></script>
+
+</body>
+</html>
